@@ -580,7 +580,10 @@ The authorization policy allows:
    - gRPC reflection endpoints (`/grpc.reflection.*`)
    - Health check endpoints (`/grpc.health.*`)
 
-2. **Client Users** (and tenant admins / IdP managers who inherit client permissions):
+2. **All JWT-authenticated users**:
+   - gRPC reflection endpoints (`/grpc.reflection.*`)
+
+3. **Client Users** (and tenant admins / IdP managers who inherit client permissions):
    - Specific gRPC methods for:
      - Clusters: `Create`, `Delete`, `Get`, `List`, `Update`
      - Cluster Templates: `Get`, `List`
